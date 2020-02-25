@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add typescript-rest
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python37\Scripts\;C:\Python37\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\LLVM\bin;C:\tools\php73;C:\ProgramData\ComposerSetup\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.1\bin;C:\Users\jj\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Yarn\bin\;C:\Users\jj\.cargo\bin;C:\Users\jj\AppData\Local\Microsoft\WindowsApps;C:\tools\dart-sdk\bin;C:\Users\jj\AppData\Roaming\Pub\Cache\bin;C:\Users\jj\AppData\Roaming\npm;C:\Program Files (x86)\clisp-2.49;C:\Users\jj\AppData\Local\Programs\VSCodium\bin;C:\tools\neovim\Neovim\bin;C:\Users\jj\AppData\Roaming\Composer\vendor\bin;C:\Users\jj\AppData\Local\Pandoc\;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\path;C:\flutter;C:\flutter\bin;C:\Users\jj\.dotnet\tools;C:\Users\jj\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  11.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/typescript/-/typescript-3.8.2.tgz: unexpected end of file
+      at Zlib.zlibOnError [as onerror] (zlib.js:162:17)
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon",
+      "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+      "migrate": "ts-node ./node_modules/.bin/typeorm migrations:generate"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@types/express": "^4.17.2",
+      "express": "^4.17.1",
+      "mongodb": "^3.5.3",
+      "nodemon": "^2.0.2",
+      "sqlite3": "^4.1.1",
+      "ts-node": "^8.6.2",
+      "typeorm": "^0.2.22",
+      "typescript": "^3.8.2"
+    },
+    "devDependencies": {
+      "tsconfig-paths": "^3.9.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
