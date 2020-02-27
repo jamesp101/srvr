@@ -6,13 +6,20 @@ import { Timeline } from "../entity/Timeline";
 
 @Path('/device')
 export class DeviceService{
-    
+
+    @GET
+    getAllDevices(){
+        return this.getallDevice()
+    }
+
+
 
     @Path(':id')
     @GET
     getDeviceById(@PathParam('id') id: string){
         return this.getDevice(id)
     }
+
 
     @Path('id')
     @PUT
@@ -21,7 +28,7 @@ export class DeviceService{
             const repository = getConnection().getRepository(Device)
             const device = repository.findOne({id : parseInt(id)})
             
-            device
+           return device
 
         }catch(e){
             return e
@@ -69,6 +76,18 @@ export class DeviceService{
         }
 
     }
+
+    async getallDevice() {
+        try {
+            const repository = getConnection().getRepository(Device)
+            const device: Device | any = await repository.find()
+            return device
+        } catch (e) {
+            return e
+        }
+
+    }
+
 
 
 

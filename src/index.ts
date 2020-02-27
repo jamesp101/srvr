@@ -7,6 +7,8 @@ import { Register } from './routes/RegisterService';
 import { UserService } from './routes/UserService';
 import { DeviceService } from './routes/DeviceService';
 
+import { runSocket} from './socket/socketdevice'
+
 
 const app:express.Application = express();
 
@@ -25,12 +27,16 @@ const apis = express.Router();
 Server.loadServices(apis, './routes/**/*.ts');
 app.use('apis', apis)
 
-Server.buildServices(app, Register, Login, UserService, DeviceService)
+Server.buildServices(app, Register, Login, UserService, DeviceService);
+
+
+
 
 app.listen(port, (err: Error) => {
+
     if (err) console.error(err);
 
-
+    runSocket(server)
     console.info(`==> Server is running at port ${port}`);
 });
 

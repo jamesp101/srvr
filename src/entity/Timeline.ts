@@ -12,18 +12,16 @@ export class Timeline{
 
 
     @Column( )
-    type!: string;
+    timelinetype!: string;
 
 
     @Column()
-    date!: Date
+    date!: string;
 
     @ManyToMany(type=> Device, device=> device.timeline)
     device!: Device[];
 
 
-
-    
 
 
 }

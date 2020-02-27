@@ -4,7 +4,7 @@ import { User } from "./User";
 import { Timeline } from "./Timeline";
 
 @Entity()
-@Unique(['deviceID'])
+@Unique(['deviceID', 'user'])
 export class Device{
 
     @PrimaryGeneratedColumn()
@@ -24,4 +24,5 @@ export class Device{
     
     @ManyToMany(type=> Timeline, timeline=>timeline.device)
     timeline!: Timeline[];
+
 }

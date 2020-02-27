@@ -2,7 +2,7 @@ import {Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, OneToMany, ManyTo
 import { Device } from "./Device";
 
 @Entity()
-@Unique(['username'])
+@Unique(['username', 'email'])
 export class User {
 
     @PrimaryGeneratedColumn()
