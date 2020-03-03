@@ -10,9 +10,8 @@ import { Timeline } from '../entity/Timeline'
 
 
 
-export function runSocket(server: Server) {
+export function runSocket(server: any) {
     const io = socket(server);
-    io.listen(8081)
 
 
 
